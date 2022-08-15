@@ -1,0 +1,97 @@
+body {
+  background: url(pexels-valiphotos-589840.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#click-me-btn {
+  position: absolute;
+  left: 130px;
+  bottom: 100px;
+
+  border-radius: 10px;
+  border-style: solid;
+  font-size: 35px;
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  padding: 13px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+#click-me-btn:hover {
+  background-color: rgba(253, 152, 70, 0.5);
+  color: rgb(148, 8, 8);
+  border-color: rgb(148, 8, 8);
+}
+
+#click-me-btn:active {
+  box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.4);
+}
+
+#container {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: white;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  padding: 20px;
+  border-radius: 9px;
+
+  box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.4);
+
+  animation-name: DropAnimation;
+  animation-duration: 1s;
+}
+
+#close-btn {
+  color: red;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+#close-btn:hover {
+  border: 1px solid rgba(226, 224, 224, 0.7);
+  background-color: rgba(226, 224, 224, 0.4);
+  padding: 5px;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+}
+
+@keyframes DropAnimation {
+  from {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Extra Feature */
+
+#dont-click {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+  font-weight: bold;
+  border: 2px solid red;
+  color: red;
+  padding: 7px;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
